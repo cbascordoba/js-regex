@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Regex</title>
+    <script>
+        function validate(str){
+            if(str.match(/^[^@_].*@[\w\.]{2,}\.[\w]{2,5}$/i)){
+                document.getElementById("boton").disabled = false;
+              
+
+            }
+            console.log(str);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input id="entry"type="text" name="email" onkeyup="validate(this.value)">
+        <input id="boton" type="button" value="Enviar" disabled>
+    </form>
+</body>
+</html>
